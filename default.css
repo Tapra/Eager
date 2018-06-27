@@ -1,0 +1,19 @@
+body{
+    background-color: #ccc;
+    background-image: url("blackOnWhite.jpg");
+    background-size: auto;
+}
+
+.jumbotron {
+    background-image: url("blackOnWhite.jpg");
+    background-attachment: fixed;
+}
+
+#container {
+    margin: 0 25% 0 25%;
+    padding: 25px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    background-color: aliceblue;
+}
