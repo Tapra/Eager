@@ -6,7 +6,17 @@
  * Time: 13:03
  */
 
+if(!isset($_SESSION)){
+    session_start();
+    $_SESSION['username'] = "Nobody";
+    $_SESSION['loggedIn'] = false;
+} else{}
 
+
+?>
+<?php
+$password = '123456';
+$passwordmd5 = md5($password);
 ?>
 <!--start of HTML Document-->
 <!DOCTYPE html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -36,10 +46,14 @@
             <li><a class="nav-link" href="signupPage.php">signup</a></li>
             <li><a class="nav-link" href="loginPage.php">login</a></li>
         </ul>
+        <div class="navbar-header">
+            <p style="color: white">Hello <?php echo $_SESSION['username'] ?></p>
+        </div>
     </div>
 </nav>
 <div class="container-fluid" id="container">
-    <p style="text-align: center">Plan !t is a meeting time organiser app.</p>
+    <p style="text-align: center">
+        Plan !t is a meeting time organiser app.
+    </p>
 </div>
 </body>
-</html>

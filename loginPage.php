@@ -6,6 +6,9 @@
  * Time: 12:20
  */
 $error = '';
+
+
+
 ?>
 <!--start of HTML Document-->
 <!DOCTYPE html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -29,11 +32,11 @@ $error = '';
     <div class="jumbotron text-center" style="margin-bottom: 0;background-color: #cccccc">
         <a class="container">
             <a href="index.php"><img src="logo1.png" class="float-left"  height="175px"></a>
-            <p><strong>Login Below</strong></p>
+            <p style="color: #fff"><strong>Login Below</strong></p>
         </div>
     </div>
     <div id="container" class="row-md-2 form-group">
-        <form action="login.php" method="post" >
+        <form method="post" action="login.php">
             <div class="form-group">
             <fieldset name ="LOGIN">
                 <table class="table-borderless" align="center">
@@ -65,7 +68,7 @@ $error = '';
                         <td>
                             <div class="btn-group btn-group-md" style="align-items: center">
                                 <p style="align: center">
-                                <button type="submit" class="btn btn-primary">login</button>
+                                <button type="submit" class="btn btn-primary" value="click" name="submit">login</button>
                                 <button type="reset" class="btn btn-primary">reset</button>
                                 </p>
                             </div>
@@ -76,5 +79,8 @@ $error = '';
             </div>
         </form>
         <span><?php $error ?></span>
+    </div>
+    <div>
+
     </div>
 </body>
