@@ -54,6 +54,7 @@ class login {
                 header("location: http://localhost/eagerbeaver/");
             } else {
                 $error = 'login fail';
+                header("location: http://localhost/eagerbeaver/");
             }
             return($error);
         }

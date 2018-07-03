@@ -29,13 +29,24 @@ $error = '';
     <link rel="stylesheet" type="text/css" href="default.css">
 </head>
 <body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.php"><img src="logo1.png" height="25" alt="Plan !T"></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a class="nav-link" href="signupPage.php">signup</a></li>
+            <li><a class="nav-link" href="loginPage.php">login</a></li>
+        </ul>
+    </div>
+</nav>
     <div class="jumbotron text-center" style="margin-bottom: 0;background-color: #cccccc">
         <a class="container">
             <a href="index.php"><img src="logo1.png" class="float-left"  height="175px"></a>
             <p style="color: #fff"><strong>Login Below</strong></p>
         </div>
     </div>
-    <div id="container" class="row-md-2 form-group">
+    <div id="container" class="row-md-2">
         <form method="post" action="login.php">
             <div class="form-group">
             <fieldset name ="LOGIN">
@@ -53,6 +64,7 @@ $error = '';
                             <div class="col-*-*">
                                 <label for="password">Password : </label>
                                 <input class="form-control" id="password" name="password" placeholder="********" type="password" required>
+
                                 <p style="text-align: right"><a href="resetPasswordPage.php" style="font-size: 12px; text-align: right">forgot password</a></p>
                             </div>
                         </td>

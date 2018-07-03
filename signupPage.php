@@ -6,6 +6,7 @@
  * Time: 13:00
  */
 
+$email = $con_email= "";
 $error = '';
 ?>
 <!--start of HTML Document-->
@@ -38,22 +39,64 @@ $error = '';
         </ul>
     </div>
 </nav>
-<div class="col-lg-2" id="container">
-    <form>
-        <p>
-            Choose your Screen name
-            <input type="text" placeholder="Username">
-            Enter Email Address
-            <input type="text">
-            Confirm Email Address
-            <input type="text">
-            Enter password
-            <input type="text">
-            confirm password
-            <input type="text">
-
-        </p>
-        <span><?php $error?></span>
-    </form>
+<div class="col-lg-*" style="align-items: center">
+    <div class="col-md-3 form-group" id="container">
+        <h3 style="text-align: center; text-decoration: underline">Sign Up</h3>
+        <form method="post">
+            <table class="table-borderless" style="alignment: center">
+                <tr>
+                    <td>
+                        <p><label for="usr">Enter your First name : </label>
+                            <input type="text"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="">Enter you Last name : </label>
+                            <input type="text"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="eml">Enter Email Address : </label>
+                            <input type="email" name="<?php $email ?>" value=""></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="eml">Confirm Email Address : </label>
+                            <input type="email" name="<?php con_email ?>"></p>
+                        <?php
+                        if($email<>$con_email){
+                            $error = 'Email does not match';
+                        }
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="pwd">Enter password : </label>
+                            <input type="text"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label for="pwd">Confirm password : </label>
+                            <input type="text"></p>
+                    </td>
+                </tr>
+            </table>
+            <span><?php $error?></span><tr>
+                <td>
+                    <div class="btn-group btn-group-md" style="align-items: center">
+                        <p style="align: center">
+                            <button type="submit" class="btn btn-primary" value="click" name="submit">Submit</button>
+                            <button type="reset" class="btn btn-primary">reset</button>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </form>
+    </div>
 </div>
 </body>
